@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  height: 100vh;
+  background-color: #181818;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  padding: 0 4rem;
+}
+.main .main__wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .main__wrapper .main__title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+.main .main__wrapper .main__title::after {
+  content: "";
+  width: 10%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -2rem;
+}
+.main .main__wrapper .main__description {
+  font-size: 1.2rem;
+  color: #b1b1b1;
+  margin-bottom: 1rem;
+}
+.main .main__wrapper .main__links {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 2rem;
+  color: #b1b1b1;
+}
+.main .main__wrapper .main__links .main__link {
+  transition: all 0.4s ease-in-out;
+}
+.main .main__wrapper .main__links .main__link:hover {
+  color: #ff00ff;
+}
+
+/*# sourceMappingURL=main.css.map */
