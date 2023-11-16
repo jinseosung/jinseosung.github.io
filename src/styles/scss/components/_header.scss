@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: transparent;
+
+  .header__link {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .header__lists {
+    display: flex;
+    gap: 2rem;
+
+    .header__list {
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

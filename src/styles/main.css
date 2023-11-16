@@ -16,6 +16,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
   height: 100vh;
   background-color: #181818;
@@ -62,6 +66,34 @@ ul {
 }
 .main .main__wrapper .main__links .main__link:hover {
   color: #ff00ff;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: transparent;
+}
+.header .header__link {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.header .header__lists {
+  display: flex;
+  gap: 2rem;
+}
+.header .header__lists .header__list {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.header .header__lists .header__list:hover {
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=main.css.map */
