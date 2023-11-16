@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Main from "../pages/main";
+import Main from "../pages/Main";
 
 const Root = () => {
   return (
