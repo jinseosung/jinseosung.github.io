@@ -10,6 +10,8 @@
 body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  background-color: #181818;
+  color: #ffffff;
 }
 
 ul {
@@ -22,15 +24,13 @@ a {
 
 .main {
   height: 100vh;
-  background-color: #181818;
-  color: #ffffff;
   font-family: "Poppins", sans-serif;
   padding: 0 4rem;
 }
 .main .main__wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,101 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .main .main__wrapper .main__links .main__link:hover {
-  color: #ff00ff;
+  color: #ffffff;
+}
+
+.about {
+  padding: 0 4rem;
+}
+.about .about__wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.about .about__wrapper .about__container {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+.about .about__wrapper .about__container .about__left {
+  width: 70%;
+  overflow: hidden;
+}
+.about .about__wrapper .about__container .about__left .about__title {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  margin-left: 6rem;
+}
+.about .about__wrapper .about__container .about__left .about__title::before {
+  content: "";
+  width: 5rem;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: -6rem;
+}
+.about .about__wrapper .about__container .about__left .about__title::after {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  margin-left: 1rem;
+}
+.about .about__wrapper .about__container .about__left p {
+  line-height: 1.6;
+}
+.about .about__wrapper .about__container .about__left .about__skills {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill {
+  display: flex;
+  flex-direction: column;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__front {
+  display: inline-block;
+  position: absolute;
+  top: -0.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #8685ef;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__back {
+  display: inline-block;
+  position: absolute;
+  top: -0.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #ff00ff;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__tool {
+  display: inline-block;
+  position: absolute;
+  top: -0.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #22a7b7;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__front,
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__back,
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tool {
+  display: none;
+}
+.about .about__wrapper img {
+  width: 300px;
+  height: 425px;
+  border-radius: 15px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" fill="%238685EF"><path d="M1912 1209c27-319-72-699-318-882-187-139-462-224-785-204S85 468 84 880c0 455 481 345 636 484s139 514 477 516c386 3 693-420 715-671Z"></path></svg>');
 }
 
 .header {

@@ -1,0 +1,91 @@
+.about {
+  padding: 0 4rem;
+
+  .about__wrapper {
+    @include wrapper;
+
+    .about__container {
+      display: flex;
+      justify-content: center;
+      gap: 3.5rem;
+
+      .about__left {
+        width: 70%;
+        overflow: hidden;
+
+        .about__title {
+          font-size: 2.3rem;
+          margin-bottom: 2rem;
+          position: relative;
+          margin-left: 6rem;
+
+          &::before {
+            content: "";
+            width: 5rem;
+            height: 1px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: -6rem;
+          }
+
+          &::after {
+            content: "";
+            width: 80%;
+            height: 1px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            margin-left: 1rem;
+          }
+        }
+
+        p {
+          line-height: 1.6;
+        }
+
+        .about__skills {
+          width: 70%;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 2rem;
+
+          .about__skill {
+            display: flex;
+            flex-direction: column;
+
+            span {
+              margin-bottom: 1rem;
+              position: relative;
+
+              &:hover .about__front {
+                @include skill-tag(#8685ef);
+              }
+
+              &:hover .about__back {
+                @include skill-tag(#ff00ff);
+              }
+
+              &:hover .about__tool {
+                @include skill-tag(#22a7b7);
+              }
+
+              .about__front,
+              .about__back,
+              .about__tool {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      width: 300px;
+      height: 425px;
+      border-radius: 15px;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" fill="%238685EF"><path d="M1912 1209c27-319-72-699-318-882-187-139-462-224-785-204S85 468 84 880c0 455 481 345 636 484s139 514 477 516c386 3 693-420 715-671Z"></path></svg>');
+    }
+  }
+}

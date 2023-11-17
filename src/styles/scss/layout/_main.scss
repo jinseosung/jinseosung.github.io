@@ -4,8 +4,6 @@ $gray: #b1b1b1;
 
 .main {
   height: 100vh;
-  background-color: #181818;
-  color: #ffffff;
   font-family: "Poppins", sans-serif;
   padding: 0 4rem;
 
@@ -48,7 +46,7 @@ $gray: #b1b1b1;
         transition: all 0.4s ease-in-out;
 
         &:hover {
-          color: #ff00ff;
+          color: #ffffff;
         }
       }
     }

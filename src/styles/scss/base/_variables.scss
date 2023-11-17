@@ -1,5 +1,14 @@
 @mixin wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
+}
+
+@mixin skill-tag($backgroundColor) {
+  display: inline-block;
+  position: absolute;
+  top: -0.2rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  background-color: $backgroundColor;
 }

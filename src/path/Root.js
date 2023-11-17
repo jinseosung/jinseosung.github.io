@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import About from "../pages/About";
 import Main from "../pages/Main";
 
 const Root = () => {
@@ -6,6 +7,7 @@ const Root = () => {
     <>
       <Header />
       <Main />
+      <About />
     </>
   );
 };
