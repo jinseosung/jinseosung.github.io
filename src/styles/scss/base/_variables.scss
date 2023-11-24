@@ -5,10 +5,12 @@
 }
 
 @mixin skill-tag($backgroundColor) {
+  width: 100%;
   display: inline-block;
   position: absolute;
   top: -0.2rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0;
   margin-left: 0.5rem;
   background-color: $backgroundColor;
+  animation: open 0.2s ease-in-out;
 }

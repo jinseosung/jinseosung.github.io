@@ -127,33 +127,41 @@ a {
   position: relative;
 }
 .about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__front {
+  width: 100%;
   display: inline-block;
   position: absolute;
   top: -0.2rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0;
   margin-left: 0.5rem;
   background-color: #8685ef;
+  animation: open 0.2s ease-in-out;
 }
 .about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__back {
+  width: 100%;
   display: inline-block;
   position: absolute;
   top: -0.2rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0;
   margin-left: 0.5rem;
   background-color: #ff00ff;
+  animation: open 0.2s ease-in-out;
 }
 .about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__tool {
+  width: 100%;
   display: inline-block;
   position: absolute;
   top: -0.2rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0;
   margin-left: 0.5rem;
   background-color: #22a7b7;
+  animation: open 0.2s ease-in-out;
 }
 .about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__front,
 .about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__back,
 .about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tool {
   display: none;
+  overflow: hidden;
+  text-align: center;
 }
 .about .about__wrapper img {
   width: 300px;
@@ -162,6 +170,14 @@ a {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" fill="%238685EF"><path d="M1912 1209c27-319-72-699-318-882-187-139-462-224-785-204S85 468 84 880c0 455 481 345 636 484s139 514 477 516c386 3 693-420 715-671Z"></path></svg>');
 }
 
+@keyframes open {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 .header {
   width: 100%;
   display: flex;

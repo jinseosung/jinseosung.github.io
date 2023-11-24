@@ -74,6 +74,8 @@
               .about__back,
               .about__tool {
                 display: none;
+                overflow: hidden;
+                text-align: center;
               }
             }
           }
@@ -87,5 +89,14 @@
       border-radius: 15px;
       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" fill="%238685EF"><path d="M1912 1209c27-319-72-699-318-882-187-139-462-224-785-204S85 468 84 880c0 455 481 345 636 484s139 514 477 516c386 3 693-420 715-671Z"></path></svg>');
     }
+  }
+}
+
+@keyframes open {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

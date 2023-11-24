@@ -38,7 +38,7 @@ const About = () => {
                 </span>
               </li>
               <li className="about__skill">
-                <span>
+                <span className="hel">
                   NodeJs<span className="about__back">backend</span>
                 </span>
                 <span>
