@@ -279,6 +279,7 @@ a {
   align-items: center;
   position: relative;
   cursor: pointer;
+  padding: 3rem;
 }
 .project .projects .project::after {
   content: "";
