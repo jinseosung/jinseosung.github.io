@@ -1,13 +1,12 @@
 .about {
-  padding: 0 4rem;
+  padding: 4rem;
 
   .about__wrapper {
     @include wrapper;
 
     .about__container {
       display: flex;
-      justify-content: center;
-      gap: 3.5rem;
+      justify-content: space-between;
 
       .about__left {
         width: 70%;
@@ -48,7 +47,7 @@
           width: 70%;
           display: flex;
           justify-content: space-between;
-          margin-top: 2rem;
+          margin-top: 3rem;
 
           .about__skill {
             display: flex;

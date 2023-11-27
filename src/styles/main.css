@@ -25,12 +25,11 @@ a {
 .main {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  padding: 0 4rem;
+  padding: 4rem;
 }
 .main .main__wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -156,17 +155,15 @@ a {
   }
 }
 .about {
-  padding: 0 4rem;
+  padding: 4rem;
 }
 .about .about__wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem;
 }
 .about .about__wrapper .about__container {
   display: flex;
-  justify-content: center;
-  gap: 3.5rem;
+  justify-content: space-between;
 }
 .about .about__wrapper .about__container .about__left {
   width: 70%;
@@ -203,7 +200,7 @@ a {
   width: 70%;
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .about .about__wrapper .about__container .about__left .about__skills .about__skill {
   display: flex;
