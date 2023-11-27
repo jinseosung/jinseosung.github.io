@@ -33,6 +33,11 @@ const Main = () => {
   return (
     <section className="main">
       <div className="main__wrapper">
+        <div className="main__shapes">
+          <div className="main__shape circle"></div>
+          <div className="main__shape block"></div>
+          <div className="main__shape triangle"></div>
+        </div>
         <h1 className="main__title">
           Bonjour !
           <br />
