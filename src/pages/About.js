@@ -1,4 +1,5 @@
 import portrait from "../assets/portrait.png";
+import Title from "../components/Title";
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       <div className="about__wrapper">
         <div className="about__container">
           <div className="about__left">
-            <h2 className="about__title">À propos</h2>
+            <Title prop={`À propos`} />
             <p>
               Je suis développeuse front-end passionnée par la tech et la
               création de petites applications web.

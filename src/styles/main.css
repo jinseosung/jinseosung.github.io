@@ -94,7 +94,7 @@ a {
 .main .main__wrapper .main__title::after {
   content: "";
   width: 10%;
-  height: 2px;
+  height: 1px;
   background-color: #ffffff;
   position: absolute;
   left: 0;
@@ -291,6 +291,31 @@ a {
 }
 .header .header__lists .header__list:hover {
   opacity: 0.6;
+}
+
+.title {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  margin-left: 6rem;
+}
+.title::before {
+  content: "";
+  width: 5rem;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: -6rem;
+}
+.title::after {
+  content: "";
+  width: 60%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
