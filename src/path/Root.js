@@ -1,7 +1,8 @@
 import Header from "../components/Header";
-import About from "../pages/About";
 import Main from "../pages/Main";
+import About from "../pages/About";
 import Project from "../pages/Project";
+import Contact from "../pages/Contact";
 
 const Root = () => {
   return (
@@ -10,6 +11,7 @@ const Root = () => {
       <Main />
       <About />
       <Project />
+      <Contact />
     </>
   );
 };
