@@ -1,4 +1,5 @@
 import portrait from "../assets/portrait.png";
+import Button from "../components/Button";
 import Title from "../components/Title";
 
 const About = () => {
@@ -70,6 +71,11 @@ const About = () => {
           </div>
           <img src={portrait} alt="Portrait" />
         </div>
+        <Button
+          className="about__btn"
+          to={`#`}
+          children={`Télécharger mon CV`}
+        />
       </div>
     </div>
   );
