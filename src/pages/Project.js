@@ -19,7 +19,7 @@ const Project = () => {
   };
 
   return (
-    <div className="project">
+    <div id="project" className="project">
       <div className="project__wrapper">
         <Title prop={`Projets`} />
         <ul className="projects">

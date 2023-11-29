@@ -4,7 +4,7 @@ import Title from "../components/Title";
 
 const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about__wrapper">
         <div className="about__container">
           <div className="about__left">
