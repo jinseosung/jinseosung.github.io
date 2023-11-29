@@ -3,6 +3,7 @@ import Main from "../pages/Main";
 import About from "../pages/About";
 import Project from "../pages/Project";
 import Contact from "../pages/Contact";
+import Footer from "../components/Footer";
 
 const Root = () => {
   return (
@@ -12,6 +13,7 @@ const Root = () => {
       <About />
       <Project />
       <Contact />
+      <Footer />
     </>
   );
 };
