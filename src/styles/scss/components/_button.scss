@@ -1,0 +1,44 @@
+.button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  border: solid 1px transparent;
+  cursor: pointer;
+  position: relative;
+
+  &:active {
+    transform: translateY(3px);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    border: solid 1px #ffffff2a;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &::after {
+    border: solid 1px darken(white, 10%);
+    opacity: 0;
+    transform: scale(1.1, 1.3);
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}

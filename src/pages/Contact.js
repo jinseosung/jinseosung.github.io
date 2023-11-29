@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import logoImg from "../assets/logo.jpg";
+import Button from "../components/Button";
 
 const Contact = () => {
   const form = useRef(null);
@@ -32,9 +32,11 @@ const Contact = () => {
         <div className="contact__left">
           <h2 className="contact__title">Contactez moi</h2>
           <span className="contact__project">Avez-vous un projet?</span>
-          <Link className="contact__mail" to={`mailto:jinseosung15@gmail.com`}>
-            <span>jinseosung15@gmail.com</span>
-          </Link>
+          <Button
+            className="contact__mail"
+            to={`mailto:jinseosung15@gmail.com`}
+            children={`jinseosung15@gmail.com`}
+          />
           <img src={logoImg} alt="logo" />
         </div>
         <form ref={form} onSubmit={sendEmail}>
@@ -67,11 +69,7 @@ const Contact = () => {
             ></textarea>
             <label>Message</label>
           </div>
-          <div className="form__btn">
-            <button className="btn" type="submit">
-              Envoyer
-            </button>
-          </div>
+          <Button className="form__btn" children={`Envoyer`} type={`submit`} />
         </form>
       </div>
     </div>
