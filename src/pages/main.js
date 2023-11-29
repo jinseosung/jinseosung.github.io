@@ -4,6 +4,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { annotate, annotationGroup } from "rough-notation";
+import Shapes from "../components/Shapes";
 
 const Main = () => {
   const sp1 = useRef(null);
@@ -33,11 +34,7 @@ const Main = () => {
   return (
     <section className="main">
       <div className="main__wrapper">
-        <div className="main__shapes">
-          <div className="main__shape circle"></div>
-          <div className="main__shape block"></div>
-          <div className="main__shape triangle"></div>
-        </div>
+        <Shapes />
         <h1 className="main__title">
           Bonjour !
           <br />

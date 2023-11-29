@@ -38,54 +38,6 @@ a {
   position: relative;
   overflow: hidden;
 }
-.main .main__wrapper .main__shape {
-  position: absolute;
-}
-.main .main__wrapper .main__shape.circle {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 3px solid #008c3c;
-  top: 100px;
-  right: 100px;
-  animation: squiggle-three 20s linear infinite;
-}
-.main .main__wrapper .main__shape.block {
-  width: 25px;
-  height: 25px;
-  border: 3px solid #dc143c;
-  top: 0px;
-  left: 0px;
-  animation: squiggle-one 16s linear infinite;
-}
-.main .main__wrapper .main__shape.triangle {
-  height: 3px;
-  width: 28px;
-  background-color: #585af7;
-  bottom: 30px;
-  left: 50%;
-  animation: squiggle-two 9s linear infinite;
-}
-.main .main__wrapper .main__shape.triangle::before {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 27px;
-  bottom: 11px;
-  right: 7px;
-  transform: rotate(122deg);
-  background-color: #585af7;
-}
-.main .main__wrapper .main__shape.triangle::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 27px;
-  bottom: 11px;
-  left: 7px;
-  transform: rotate(58deg);
-  background-color: #585af7;
-}
 .main .main__wrapper .main__title {
   font-size: 3rem;
   margin-bottom: 4rem;
@@ -118,43 +70,6 @@ a {
   color: #ffffff;
 }
 
-/* ANIMATIONS */
-@keyframes squiggle-one {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(150px, 100px);
-  }
-  50% {
-    transform: translate(240px, 300px);
-  }
-  75% {
-    transform: translate(200px, 50px);
-  }
-}
-@keyframes squiggle-two {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(-60px, 0px);
-  }
-}
-@keyframes squiggle-three {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(20px, 200px);
-  }
-  50% {
-    transform: translate(-136.3636363636px, -100px);
-  }
-  75% {
-    transform: translate(-150px, 30px);
-  }
-}
 .about {
   padding: 4rem;
 }
@@ -531,6 +446,91 @@ a {
   margin-left: 1rem;
 }
 
+.shapes .shape {
+  position: absolute;
+  z-index: -1;
+}
+.shapes .shape.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid;
+  top: 100px;
+  right: 100px;
+  animation: squiggle-three 20s linear infinite;
+}
+.shapes .shape.block {
+  width: 25px;
+  height: 25px;
+  border: 3px solid;
+  top: 0px;
+  left: 0px;
+  animation: squiggle-one 16s linear infinite;
+}
+.shapes .shape.triangle {
+  height: 3px;
+  width: 28px;
+  bottom: 50%;
+  left: 50%;
+  animation: squiggle-two 9s linear infinite;
+}
+.shapes .shape.triangle::before, .shapes .shape.triangle::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 27px;
+  bottom: 11px;
+  background-color: inherit;
+}
+.shapes .shape.triangle::before {
+  right: 7px;
+  transform: rotate(122deg);
+}
+.shapes .shape.triangle::after {
+  left: 7px;
+  transform: rotate(58deg);
+}
+
+/* ANIMATIONS */
+@keyframes squiggle-one {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(150px, 100px);
+  }
+  50% {
+    transform: translate(240px, 300px);
+  }
+  75% {
+    transform: translate(200px, 50px);
+  }
+}
+@keyframes squiggle-two {
+  0% {
+    transform: translate(0px, 200px);
+  }
+  25% {
+    transform: translate(-60px, 100px);
+  }
+  75% {
+    transform: translate(60px, 0px);
+  }
+}
+@keyframes squiggle-three {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(20px, 200px);
+  }
+  50% {
+    transform: translate(-136.3636363636px, -100px);
+  }
+  75% {
+    transform: translate(-150px, 30px);
+  }
+}
 .button {
   font-family: inherit;
   background-color: transparent;

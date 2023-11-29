@@ -1,0 +1,117 @@
+$red: #dc143c;
+$green: #008c3c;
+$blue: #585af7;
+
+.shapes {
+  .shape {
+    position: absolute;
+    z-index: -1;
+
+    &.circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 3px solid;
+      top: 100px;
+      right: 100px;
+      animation: squiggle-three 20s linear infinite;
+    }
+
+    &.block {
+      width: 25px;
+      height: 25px;
+      border: 3px solid;
+      top: 0px;
+      left: 0px;
+      animation: squiggle-one 16s linear infinite;
+    }
+
+    &.triangle {
+      height: 3px;
+      width: 28px;
+      bottom: 50%;
+      left: 50%;
+      animation: squiggle-two 9s linear infinite;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 27px;
+        bottom: 11px;
+        background-color: inherit;
+      }
+      &::before {
+        right: 7px;
+        transform: rotate(122deg);
+      }
+      &::after {
+        left: 7px;
+        transform: rotate(58deg);
+      }
+    }
+  }
+}
+
+/* ANIMATIONS */
+@mixin first-squiggle($width: 300px) {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate($width/2, 100px);
+  }
+  50% {
+    transform: translate($width/1.25, 300px);
+  }
+  75% {
+    transform: translate($width - 100, 50px);
+  }
+}
+@mixin second-squiggle($width: 300px) {
+  0% {
+    transform: translate(0px, 200px);
+  }
+  25% {
+    transform: translate(-$width/5, 100px);
+  }
+  75% {
+    transform: translate($width/5, 0px);
+  }
+}
+@mixin third-squiggle($width: 300px) {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate($width/15, 200px);
+  }
+  50% {
+    transform: translate(-$width/2.2, -100px);
+  }
+  75% {
+    transform: translate(-$width/2, 30px);
+  }
+}
+@mixin fourth-squiggle($width: 300px) {
+  0% {
+    transform: skew(20deg, 0deg) translate(0px, 0px);
+  }
+  25% {
+    transform: skew(20deg, 0deg) translate(-$width/2, 100px);
+  }
+  50% {
+    transform: skew(20deg, 0deg) translate(-$width/2.2, 100px);
+  }
+}
+
+@keyframes squiggle-one {
+  @include first-squiggle();
+}
+@keyframes squiggle-two {
+  @include second-squiggle();
+}
+@keyframes squiggle-three {
+  @include third-squiggle();
+}
