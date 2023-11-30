@@ -130,42 +130,29 @@ a {
   margin-bottom: 1rem;
   position: relative;
 }
-.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__front {
-  width: 100%;
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tag {
+  width: 0;
   display: inline-block;
   position: absolute;
   top: -0.2rem;
   padding: 0.2rem 0;
   margin-left: 0.5rem;
-  background-color: #8685ef;
-  animation: open 0.2s ease-in-out;
-}
-.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__back {
-  width: 100%;
-  display: inline-block;
-  position: absolute;
-  top: -0.2rem;
-  padding: 0.2rem 0;
-  margin-left: 0.5rem;
-  background-color: #ff00ff;
-  animation: open 0.2s ease-in-out;
-}
-.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__tool {
-  width: 100%;
-  display: inline-block;
-  position: absolute;
-  top: -0.2rem;
-  padding: 0.2rem 0;
-  margin-left: 0.5rem;
-  background-color: #22a7b7;
-  animation: open 0.2s ease-in-out;
-}
-.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__front,
-.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__back,
-.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tool {
-  display: none;
+  animation: close 0.2s ease-in-out;
   overflow: hidden;
   text-align: center;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tag.frontend {
+  background-color: #8685ef;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tag.backend {
+  background-color: #ff00ff;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span .about__tag.outil {
+  background-color: #22a7b7;
+}
+.about .about__wrapper .about__container .about__left .about__skills .about__skill span:hover .about__tag {
+  width: 100%;
+  animation: open 0.2s ease-in-out;
 }
 .about .about__wrapper img {
   width: 300px;
@@ -180,6 +167,14 @@ a {
   }
   to {
     width: 100%;
+  }
+}
+@keyframes close {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
   }
 }
 .project {

@@ -61,24 +61,25 @@
               margin-bottom: 1rem;
               position: relative;
 
-              &:hover .about__front {
-                @include skill-tag(#8685ef);
+              .about__tag {
+                @include tag();
+
+                &.frontend {
+                  background-color: #8685ef;
+                }
+
+                &.backend {
+                  background-color: #ff00ff;
+                }
+
+                &.outil {
+                  background-color: #22a7b7;
+                }
               }
 
-              &:hover .about__back {
-                @include skill-tag(#ff00ff);
-              }
-
-              &:hover .about__tool {
-                @include skill-tag(#22a7b7);
-              }
-
-              .about__front,
-              .about__back,
-              .about__tool {
-                display: none;
-                overflow: hidden;
-                text-align: center;
+              &:hover .about__tag {
+                width: 100%;
+                animation: open 0.2s ease-in-out;
               }
             }
           }
@@ -101,5 +102,14 @@
   }
   to {
     width: 100%;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
   }
 }

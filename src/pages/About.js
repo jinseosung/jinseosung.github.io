@@ -3,6 +3,21 @@ import Button from "../components/Button";
 import Title from "../components/Title";
 
 const About = () => {
+  const frontends = ["HTML", "SCSS", "Javascript", "React"];
+  const backends = ["NodeJs", "Express", "API REST", "MongoDB", "Firebase"];
+  const outils = ["VSCode", "Git", "Figma"];
+
+  const renderSkills = (list, type) => (
+    <li className="about__skill">
+      {list.map((el, index) => (
+        <span key={index}>
+          {el}
+          <span className={`about__tag ${type}`}>{type}</span>
+        </span>
+      ))}
+    </li>
+  );
+
   return (
     <div id="about" className="about">
       <div className="about__wrapper">
@@ -25,48 +40,9 @@ const About = () => {
               nouvelles technologies, notamment TypeScript et Next.js.
             </p>
             <ul className="about__skills">
-              <li className="about__skill">
-                <span>
-                  HTML<span className="about__front">frontend</span>
-                </span>
-                <span>
-                  SCSS<span className="about__front">frontend</span>
-                </span>
-                <span>
-                  Javascript<span className="about__front">frontend</span>
-                </span>
-                <span>
-                  React<span className="about__front">frontend</span>
-                </span>
-              </li>
-              <li className="about__skill">
-                <span className="hel">
-                  NodeJs<span className="about__back">backend</span>
-                </span>
-                <span>
-                  Express<span className="about__back">backend</span>
-                </span>
-                <span>
-                  API REST<span className="about__back">backend</span>
-                </span>
-                <span>
-                  MongoDB<span className="about__back">backend</span>
-                </span>
-                <span>
-                  Firebase<span className="about__back">backend</span>
-                </span>
-              </li>
-              <li className="about__skill">
-                <span>
-                  VSCode<span className="about__tool">outil</span>
-                </span>
-                <span>
-                  Git<span className="about__tool">outil</span>
-                </span>
-                <span>
-                  Figma<span className="about__tool">outil</span>
-                </span>
-              </li>
+              {renderSkills(frontends, "frontend")}
+              {renderSkills(backends, "backend")}
+              {renderSkills(outils, "outil")}
             </ul>
           </div>
           <img src={portrait} alt="Portrait" />

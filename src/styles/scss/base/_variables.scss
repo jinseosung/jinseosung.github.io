@@ -3,15 +3,16 @@
   margin: 0 auto;
 }
 
-@mixin skill-tag($backgroundColor) {
-  width: 100%;
+@mixin tag() {
+  width: 0;
   display: inline-block;
   position: absolute;
   top: -0.2rem;
   padding: 0.2rem 0;
   margin-left: 0.5rem;
-  background-color: $backgroundColor;
-  animation: open 0.2s ease-in-out;
+  animation: close 0.2s ease-in-out;
+  overflow: hidden;
+  text-align: center;
 }
 
 @mixin input-reset {
