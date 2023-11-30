@@ -14,7 +14,7 @@ $blue: #585af7;
       border: 3px solid;
       top: 100px;
       right: 100px;
-      animation: squiggle-three 20s linear infinite;
+      animation: 16s linear infinite;
     }
 
     &.block {
@@ -23,7 +23,7 @@ $blue: #585af7;
       border: 3px solid;
       top: 0px;
       left: 0px;
-      animation: squiggle-one 16s linear infinite;
+      animation: 16s linear infinite;
     }
 
     &.triangle {
@@ -31,7 +31,7 @@ $blue: #585af7;
       width: 28px;
       bottom: 50%;
       left: 50%;
-      animation: squiggle-two 9s linear infinite;
+      animation: 16s linear infinite;
 
       &::before,
       &::after {
@@ -92,17 +92,6 @@ $blue: #585af7;
   }
   75% {
     transform: translate(-$width/2, 30px);
-  }
-}
-@mixin fourth-squiggle($width: 300px) {
-  0% {
-    transform: skew(20deg, 0deg) translate(0px, 0px);
-  }
-  25% {
-    transform: skew(20deg, 0deg) translate(-$width/2, 100px);
-  }
-  50% {
-    transform: skew(20deg, 0deg) translate(-$width/2.2, 100px);
   }
 }
 

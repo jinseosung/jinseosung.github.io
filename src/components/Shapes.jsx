@@ -7,10 +7,12 @@ export default function Shapes() {
     const generateRandomShape = () => {
       const colors = ["#dc143c", "#008c3c", "#585af7"];
       const types = ["circle", "block", "triangle"];
+      const names = ["squiggle-one", "squiggle-two", "squiggle-three"];
 
       return {
         type: types[Math.floor(Math.random() * types.length)],
         color: colors[Math.floor(Math.random() * colors.length)],
+        name: names[Math.floor(Math.random() * names.length)],
         top: `${Math.random() * 600}px`,
         left: `${Math.random() * 1200}px`,
       };
@@ -33,9 +35,15 @@ export default function Shapes() {
               ? {
                   top: shape.top,
                   left: shape.left,
+                  animationName: shape.name,
                   backgroundColor: shape.color,
                 }
-              : { top: shape.top, left: shape.left, borderColor: shape.color }
+              : {
+                  top: shape.top,
+                  left: shape.left,
+                  animationName: shape.name,
+                  borderColor: shape.color,
+                }
           }
         ></div>
       ))}

@@ -457,7 +457,7 @@ a {
   border: 3px solid;
   top: 100px;
   right: 100px;
-  animation: squiggle-three 20s linear infinite;
+  animation: 16s linear infinite;
 }
 .shapes .shape.block {
   width: 25px;
@@ -465,14 +465,14 @@ a {
   border: 3px solid;
   top: 0px;
   left: 0px;
-  animation: squiggle-one 16s linear infinite;
+  animation: 16s linear infinite;
 }
 .shapes .shape.triangle {
   height: 3px;
   width: 28px;
   bottom: 50%;
   left: 50%;
-  animation: squiggle-two 9s linear infinite;
+  animation: 16s linear infinite;
 }
 .shapes .shape.triangle::before, .shapes .shape.triangle::after {
   content: "";
