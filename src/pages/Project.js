@@ -42,8 +42,8 @@ const Project = () => {
                   style={{
                     width: "370px",
                     position: "fixed",
-                    left: `${position.x-200}px`,
-                    top: `${position.y-150}px`,
+                    left: `${position.x - 200}px`,
+                    top: `${position.y - 150}px`,
                     pointerEvents: "none",
                     zIndex: 1,
                     transition: "all 0.2s linear",
