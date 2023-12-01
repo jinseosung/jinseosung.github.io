@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
@@ -562,6 +563,111 @@ a {
 .button:hover::after {
   opacity: 1;
   transform: scale(1, 1);
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal__wrapper {
+  width: 80%;
+  height: 100%;
+  max-width: calc(100vw - 200px);
+  max-height: calc(100vh - 60px);
+  border: 1px solid #b1b1b1;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.modal .modal__wrapper .modal__top {
+  position: relative;
+}
+.modal .modal__wrapper .modal__top .modal__title {
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.modal .modal__wrapper .modal__top .modal__icon {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.modal .modal__wrapper .modal__main {
+  height: 78.2%;
+  display: flex;
+  border-top: 1px solid #b1b1b1;
+  border-bottom: 1px solid #b1b1b1;
+}
+.modal .modal__wrapper .modal__main .modal__carousel {
+  width: 75%;
+}
+.modal .modal__wrapper .modal__main .modal__description {
+  width: 25%;
+  padding: 1rem;
+  overflow: auto;
+  border-left: 1px solid #b1b1b1;
+}
+.modal .modal__wrapper .modal__main .modal__description .modal__icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.modal .modal__wrapper .modal__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.modal .modal__wrapper .modal__bottom .modal__prev {
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.modal .modal__wrapper .modal__bottom .modal__prev::after {
+  content: "«";
+  font-size: 1.5rem;
+  opacity: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -1.5rem;
+  transition: 0.5s;
+}
+.modal .modal__wrapper .modal__bottom .modal__prev:hover {
+  padding-left: 0.5rem;
+}
+.modal .modal__wrapper .modal__bottom .modal__prev:hover::after {
+  opacity: 1;
+  left: -0.5rem;
+}
+.modal .modal__wrapper .modal__bottom .modal__next {
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.modal .modal__wrapper .modal__bottom .modal__next::after {
+  content: "»";
+  font-size: 1.5rem;
+  opacity: 0;
+  position: absolute;
+  bottom: -4px;
+  right: -1.5rem;
+  transition: 0.5s;
+}
+.modal .modal__wrapper .modal__bottom .modal__next:hover {
+  padding-right: 0.5rem;
+}
+.modal .modal__wrapper .modal__bottom .modal__next:hover::after {
+  opacity: 1;
+  right: -0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

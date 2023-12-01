@@ -1,10 +1,16 @@
 import { useState } from "react";
 import Title from "../components/Title";
 import projects from "../datas/project.json";
+import Modal from "../components/Modal";
 
 const Project = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMouseClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   const handleMouseMove = (e) => {
     setPosition({ x: e.clientX, y: e.clientY });
@@ -27,6 +33,7 @@ const Project = () => {
             <li
               key={project.id}
               className="project"
+              onClick={handleMouseClick}
               onMouseMove={handleMouseMove}
               onMouseEnter={() => {
                 handleMouseEnter(project.id);
@@ -54,6 +61,7 @@ const Project = () => {
           ))}
         </ul>
       </div>
+      {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
     </div>
   );
 };
