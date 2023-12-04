@@ -6,12 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Modal({ isOpen, setIsOpen }) {
   return (
-    <CSSTransition
-      in={isOpen}
-      timeout={300}
-      classNames="modal"
-      unmountOnExit
-    >
+    <CSSTransition in={isOpen} timeout={300} classNames="modal" unmountOnExit>
       <div className="modal">
         <div className="modal__wrapper">
           <div className="modal__top">
@@ -39,11 +34,18 @@ export default function Modal({ isOpen, setIsOpen }) {
                 accusantium animi in soluta delectus laboriosam, vel dolorem
                 ullam nemo hic et minima sit!
               </p>
+              <ul className="modal__skills">
+                <li className="modal__skill">skill</li>
+              </ul>
             </div>
           </div>
           <div className="modal__bottom">
-            <div className="modal__prev">prev project</div>
-            <div className="modal__next">next project</div>
+            <div className="modal__prev">
+              prev project
+            </div>
+            <div className="modal__next">
+              next project
+            </div>
           </div>
         </div>
       </div>
