@@ -38,25 +38,26 @@ const Project = () => {
               onMouseEnter={() => {
                 handleMouseEnter(project.id);
               }}
-              onMouseLeave={handleMouseLeave}
+              onMouseLeave={() => {
+                handleMouseLeave();
+              }}
             >
               <h3 className="project__title">{project.title}</h3>
               <p className="project__skill">{project.skill}</p>
-              {hoveredProject === project.id && (
-                <img
-                  src={project.prevImg}
-                  alt="project"
-                  style={{
-                    width: "370px",
-                    position: "fixed",
-                    left: `${position.x - 200}px`,
-                    top: `${position.y - 150}px`,
-                    pointerEvents: "none",
-                    zIndex: 1,
-                    transition: "all 0.2s linear",
-                  }}
-                />
-              )}
+              <img
+                src={project.prevImg}
+                alt={project.title}
+                style={{
+                  width: "370px",
+                  position: "fixed",
+                  left: `${position.x - 200}px`,
+                  top: `${position.y - 150}px`,
+                  pointerEvents: "none",
+                  zIndex: 1,
+                  opacity: `${hoveredProject === project.id ? 1 : 0}`,
+                  transition: `left 200ms linear, top 200ms linear, opacity 200ms`,
+                }}
+              />
             </li>
           ))}
         </ul>
