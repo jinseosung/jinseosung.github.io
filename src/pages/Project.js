@@ -61,7 +61,7 @@ const Project = () => {
           ))}
         </ul>
       </div>
-      {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };
