@@ -7,9 +7,11 @@ const Project = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isOpen, setIsOpen] = useState(false);
+  const [projectIndex, setProjectIndex] = useState(0);
 
-  const handleMouseClick = () => {
+  const handleMouseClick = (index) => {
     setIsOpen(!isOpen);
+    setProjectIndex(index);
   };
 
   const handleMouseMove = (e) => {
@@ -29,11 +31,13 @@ const Project = () => {
       <div className="project__wrapper">
         <Title prop={`Projets`} />
         <ul className="projects">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <li
               key={project.id}
               className="project"
-              onClick={handleMouseClick}
+              onClick={() => {
+                handleMouseClick(index);
+              }}
               onMouseMove={handleMouseMove}
               onMouseEnter={() => {
                 handleMouseEnter(project.id);
@@ -43,9 +47,9 @@ const Project = () => {
               }}
             >
               <h3 className="project__title">{project.title}</h3>
-              <p className="project__skill">{project.skill}</p>
+              <p className="project__skill">{project.skills.join(", ")}</p>
               <img
-                src={project.prevImg}
+                src={project.hoverImg}
                 alt={project.title}
                 style={{
                   width: "370px",
@@ -62,7 +66,13 @@ const Project = () => {
           ))}
         </ul>
       </div>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Modal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        projects={projects}
+        projectIndex={projectIndex}
+        setProjectIndex={setProjectIndex}
+      />
     </div>
   );
 };

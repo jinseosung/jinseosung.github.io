@@ -577,6 +577,9 @@ a {
   align-items: center;
 }
 .modal .modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 80%;
   height: 100%;
   max-width: calc(100vw - 200px);
@@ -596,13 +599,14 @@ a {
 .modal .modal__wrapper .modal__top .modal__icon {
   font-size: 1.5rem;
   position: absolute;
-  top: 0.5rem;
+  top: 35%;
   right: 2rem;
   cursor: pointer;
 }
 .modal .modal__wrapper .modal__main {
-  height: 78.2%;
+  min-height: 70%;
   display: flex;
+  flex: 1;
   border-top: 1px solid #b1b1b1;
   border-bottom: 1px solid #b1b1b1;
 }
@@ -621,6 +625,9 @@ a {
   gap: 1rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+.modal .modal__wrapper .modal__main .modal__description p {
+  line-height: 1.5rem;
 }
 .modal .modal__wrapper .modal__main .modal__description .modal__skills {
   display: flex;
@@ -705,6 +712,52 @@ a {
   opacity: 0;
   transform: scale(0);
   transition: all 300ms;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .carousel__image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .carousel__image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+.carousel .carousel__icon {
+  color: #b1b1b1;
+  position: absolute;
+  font-size: 2.3rem;
+  top: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.carousel .carousel__icon.icon-left {
+  left: 10px;
+}
+.carousel .carousel__icon.icon-right {
+  right: 10px;
+}
+.carousel .carousel__icon:hover {
+  transform: scale(1.1);
+}
+
+.image-enter {
+  opacity: 0;
+}
+
+.image-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
 /*# sourceMappingURL=main.css.map */
