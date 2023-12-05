@@ -6,8 +6,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { CSSTransition } from "react-transition-group";
 
-export default function Carousel({ className, project }) {
-  const [imageIndex, setImageIndex] = useState(0);
+export default function Carousel({
+  className,
+  project,
+  imageIndex,
+  setImageIndex,
+}) {
   const [inProp, setInProp] = useState(false);
   const nodeRef = useRef(null);
   const images = project.images;

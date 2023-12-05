@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,11 +13,13 @@ export default function Modal({
   projectIndex,
   setProjectIndex,
 }) {
+  const [imageIndex, setImageIndex] = useState(0);
   const project = projects[projectIndex];
   const nodeRef = useRef(null);
 
   const handleButtonClick = (e) => {
     const className = e.target.className;
+    setImageIndex(0);
 
     if (className === "modal__prev") {
       setProjectIndex(
@@ -43,13 +45,21 @@ export default function Modal({
           <div className="modal__top">
             <h4 className="modal__title">{project.title}</h4>
             <FontAwesomeIcon
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                setIsOpen(!isOpen);
+                setImageIndex(0);
+              }}
               className="modal__icon"
               icon={faX}
             />
           </div>
           <div className="modal__main">
-            <Carousel className="modal__carousel" project={project} />
+            <Carousel
+              className="modal__carousel"
+              project={project}
+              imageIndex={imageIndex}
+              setImageIndex={setImageIndex}
+            />
             <div className="modal__description">
               <div className="modal__icons">
                 <Link to={project.url.github} target="_blank">
