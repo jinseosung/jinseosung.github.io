@@ -5,7 +5,7 @@ import Modal from "../components/Modal";
 
 const Project = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: undefined, y: undefined });
   const [isOpen, setIsOpen] = useState(false);
   const [projectIndex, setProjectIndex] = useState(0);
 
