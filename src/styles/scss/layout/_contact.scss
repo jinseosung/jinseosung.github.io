@@ -30,7 +30,7 @@
         content: "";
         width: 4rem;
         height: 2px;
-        background-color: #ffffff2a;
+        background-color: $borderColor;
         position: absolute;
         top: 50%;
         left: -5rem;
@@ -59,7 +59,7 @@
 
         &:not(:placeholder-shown) {
           + label {
-            color: #ffffff2a;
+            color: $borderColor;
             font-size: 0.9rem;
             transform: translateY(-5px);
           }
@@ -68,7 +68,7 @@
           animation: color-change 0.5s linear;
 
           + label {
-            color: #ffffff2a;
+            color: $borderColor;
             font-size: 0.9rem;
             transform: translateY(-5px);
           }
@@ -91,7 +91,7 @@
 
       &:not(:placeholder-shown) {
         + label {
-          color: #ffffff2a;
+          color: $borderColor;
           font-size: 0.9rem;
           transform: translateY(-5px);
         }
@@ -101,7 +101,7 @@
         animation: color-change 0.5s linear;
 
         + label {
-          color: #ffffff2a;
+          color: $borderColor;
           font-size: 0.9rem;
           transform: translateY(-5px);
         }
@@ -119,12 +119,12 @@
 @keyframes color-change {
   0%,
   100% {
-    border-color: #ffffff2a;
+    border-color: $borderColor;
   }
   25% {
-    border-color: #181818;
+    border-color: $primaryColor;
   }
   75% {
-    border-color: #181818;
+    border-color: $primaryColor;
   }
 }

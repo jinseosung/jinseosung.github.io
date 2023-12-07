@@ -23,7 +23,7 @@
   }
 
   &::before {
-    border: solid 1px #ffffff2a;
+    border: solid 1px $borderColor;
   }
 
   &:hover::before {

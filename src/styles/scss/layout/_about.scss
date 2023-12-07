@@ -1,3 +1,7 @@
+$blue: #8685ef;
+$rose: #ff00ff;
+$green: #22a7b7;
+
 .about {
   padding: 4rem;
 
@@ -26,7 +30,7 @@
             content: "";
             width: 5rem;
             height: 1px;
-            background-color: #ffffff;
+            background-color: $secondaryColor;
             position: absolute;
             top: 50%;
             left: -6rem;
@@ -36,7 +40,7 @@
             content: "";
             width: 80%;
             height: 1px;
-            background-color: #ffffff;
+            background-color: $secondaryColor;
             position: absolute;
             top: 50%;
             margin-left: 1rem;
@@ -65,15 +69,15 @@
                 @include tag();
 
                 &.frontend {
-                  background-color: #8685ef;
+                  background-color: $blue;
                 }
 
                 &.backend {
-                  background-color: #ff00ff;
+                  background-color: $rose;
                 }
 
                 &.outil {
-                  background-color: #22a7b7;
+                  background-color: $green;
                 }
               }
 

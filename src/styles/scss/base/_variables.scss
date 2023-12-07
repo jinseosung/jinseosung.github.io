@@ -1,3 +1,10 @@
+/* COLORS */
+$primaryColor: #181818;
+$secondaryColor: #ffffff;
+$gray: #b1b1b1;
+$grayHover: #ffffff56;
+$borderColor: #ffffff2a;
+
 @mixin wrapper {
   max-width: 1400px;
   margin: 0 auto;
