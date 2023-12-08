@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import projects from "../datas/project.json";
 import Modal from "../components/Modal";
 
-const Project = () => {
+const Project = ({ width }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [position, setPosition] = useState({ x: undefined, y: undefined });
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,7 @@ const Project = () => {
   };
 
   const handleMouseMove = (e) => {
+    if (width < 991) return;
     setPosition({ x: e.clientX, y: e.clientY });
   };
 
@@ -31,39 +32,58 @@ const Project = () => {
       <div className="project__wrapper">
         <Title prop={`Projets`} />
         <ul className="projects">
-          {projects.map((project, index) => (
-            <li
-              key={project.id}
-              className="project"
-              onClick={() => {
-                handleMouseClick(index);
-              }}
-              onMouseMove={handleMouseMove}
-              onMouseEnter={() => {
-                handleMouseEnter(project.id);
-              }}
-              onMouseLeave={() => {
-                handleMouseLeave();
-              }}
-            >
-              <h3 className="project__title">{project.title}</h3>
-              <p className="project__skill">{project.skills.join(", ")}</p>
-              <img
-                src={project.hoverImg}
-                alt={project.title}
-                style={{
-                  width: "370px",
-                  position: "fixed",
-                  left: `${position.x - 200}px`,
-                  top: `${position.y - 150}px`,
-                  pointerEvents: "none",
-                  zIndex: 1,
-                  opacity: `${hoveredProject === project.id ? 1 : 0}`,
-                  transition: `left 200ms linear, top 200ms linear, opacity 200ms`,
+          {projects.map((project, index) =>
+            width > 991 ? (
+              <li
+                key={project.id}
+                className="project"
+                onClick={() => {
+                  handleMouseClick(index);
                 }}
-              />
-            </li>
-          ))}
+                onMouseMove={handleMouseMove}
+                onMouseEnter={() => {
+                  handleMouseEnter(project.id);
+                }}
+                onMouseLeave={() => {
+                  handleMouseLeave();
+                }}
+              >
+                <h3 className="project__title">{project.title}</h3>
+                <p className="project__skill">{project.skills.join(", ")}</p>
+                <img
+                  className="project__img"
+                  src={project.hoverImg}
+                  alt={project.title}
+                  style={{
+                    left: `${position.x - 200}px`,
+                    top: `${position.y - 150}px`,
+                    opacity: `${hoveredProject === project.id ? 1 : 0}`,
+                  }}
+                />
+              </li>
+            ) : (
+              <li
+                key={project.id}
+                className="project"
+                onClick={() => {
+                  handleMouseClick(index);
+                }}
+                onMouseEnter={() => {
+                  handleMouseEnter(project.id);
+                }}
+              >
+                <div className="project__img-container">
+                  <img
+                    className="project__img-sm"
+                    src={project.hoverImg}
+                    alt={project.title}
+                  />
+                </div>
+                <h3 className="project__title">{project.title}</h3>
+                <p className="project__skill">{project.skills.join(", ")}</p>
+              </li>
+            )
+          )}
         </ul>
       </div>
       <Modal

@@ -14,10 +14,18 @@
     flex-direction: column;
     align-items: flex-end;
 
+    @media (max-width: $breakbpoint-lg) {
+      width: 50%;
+    }
+
     .contact__title {
       align-self: flex-start;
       font-size: 2.3rem;
       margin-left: 3rem;
+
+      @media (max-width: $breakbpoint-lg) {
+        margin-left: 0;
+      }
     }
 
     .contact__project {
@@ -25,6 +33,11 @@
       margin-top: 1rem;
       color: $gray;
       position: relative;
+      text-align: end;
+
+      @media (max-width: $breakbpoint-lg) {
+        font-size: 1.8rem;
+      }
 
       &::before {
         content: "";
@@ -34,11 +47,24 @@
         position: absolute;
         top: 50%;
         left: -5rem;
+
+        @media (max-width: 1200px) {
+          display: none;
+        }
       }
     }
 
     .contact__mail {
       margin: 3rem 0;
+    }
+
+    .contact__img-container {
+      max-width: 345px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 

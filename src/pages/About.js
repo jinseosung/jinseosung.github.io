@@ -45,7 +45,9 @@ const About = () => {
               {renderSkills(outils, "outil")}
             </ul>
           </div>
-          <img src={portrait} alt="Portrait" />
+          <div className="about__img-container">
+            <img src={portrait} alt="Portrait" />
+          </div>
         </div>
         <Button
           className="about__btn"

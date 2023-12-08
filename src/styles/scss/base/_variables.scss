@@ -5,6 +5,11 @@ $gray: #b1b1b1;
 $grayHover: #ffffff56;
 $borderColor: #ffffff2a;
 
+/* BREAKPOINTS */
+$breakbpoint-sm: 599px;
+$breakbpoint-md: 767px;
+$breakbpoint-lg: 991px;
+
 @mixin wrapper {
   max-width: 1400px;
   margin: 0 auto;

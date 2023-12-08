@@ -37,7 +37,9 @@ const Contact = () => {
             to={`mailto:jinseosung15@gmail.com`}
             children={`jinseosung15@gmail.com`}
           />
+          <div className="contact__img-container">
           <img src={logoImg} alt="logo" />
+          </div>
         </div>
         <form ref={form} onSubmit={sendEmail}>
           <div className="form__container">
