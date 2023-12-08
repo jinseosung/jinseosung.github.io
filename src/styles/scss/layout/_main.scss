@@ -1,7 +1,7 @@
 .main {
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  padding: 4rem;
+  @include base-padding;
 
   .main__wrapper {
     @include wrapper;
@@ -16,6 +16,10 @@
       font-size: 3rem;
       margin-bottom: 4rem;
       position: relative;
+
+      @media (max-width: $breakbpoint-sm) {
+        font-size: 2.2rem;
+      }
 
       &::after {
         content: "";
@@ -32,6 +36,10 @@
       font-size: 1.2rem;
       color: $gray;
       margin-bottom: 1rem;
+
+      @media (max-width: $breakbpoint-sm) {
+        font-size: 1rem;
+      }
     }
 
     .main__links {

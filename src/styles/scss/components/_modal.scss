@@ -21,6 +21,16 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
 
+    @media (max-width: $breakbpoint-lg) {
+      background-color: $primaryColor;
+    }
+
+    @media (max-width: $breakbpoint-md) {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
     .modal__top {
       position: relative;
 
@@ -45,9 +55,18 @@
       flex: 1;
       border-top: 1px solid $gray;
       border-bottom: 1px solid $gray;
+      background-color: $primaryColor;
+
+      @media (max-width: $breakbpoint-md) {
+        flex-direction: column;
+      }
 
       .modal__carousel {
         width: 75%;
+
+        @media (max-width: $breakbpoint-md) {
+          width: 100%;
+        }
       }
 
       .modal__description {
@@ -55,6 +74,10 @@
         padding: 1rem;
         overflow: auto;
         border-left: 1px solid $gray;
+
+        @media (max-width: $breakbpoint-md) {
+          width: 100%;
+        }
 
         .modal__icons {
           display: flex;

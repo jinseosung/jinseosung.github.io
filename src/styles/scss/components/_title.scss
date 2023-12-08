@@ -4,6 +4,10 @@
     position: relative;
     margin-left: 6rem;
 
+    @media (max-width: $breakbpoint-sm) {
+      margin-left: 4rem;
+    }
+
     &::before {
       content: "";
       width: 5rem;
@@ -12,6 +16,11 @@
       position: absolute;
       top: 50%;
       left: -6rem;
+
+      @media (max-width: $breakbpoint-sm) {
+        width: 3rem;
+        left: -4rem;
+      }
     }
 
     &::after {
@@ -22,5 +31,9 @@
       position: absolute;
       top: 50%;
       margin-left: 1rem;
+
+      @media (max-width: $breakbpoint-sm) {
+        width: 35%;
+      }
     }
   }

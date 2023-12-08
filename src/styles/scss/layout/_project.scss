@@ -1,5 +1,5 @@
 .project {
-  padding: 4rem;
+  @include base-padding;
 
   .project__wrapper {
     @include wrapper;
@@ -17,6 +17,10 @@
       gap: 0;
     }
 
+    @media (max-width: $breakbpoint-sm) {
+      flex-direction: column;
+    }
+
     .project {
       display: flex;
       align-items: center;
@@ -32,6 +36,18 @@
 
         &:hover .project__img-sm {
           transform: scale(1.02);
+        }
+      }
+
+      @media (max-width: $breakbpoint-md) {
+        padding: 0 0.8rem 4rem 0.8rem;
+      }
+
+      @media (max-width: $breakbpoint-sm) {
+        width: 100%;
+
+        &:hover .project__img-sm {
+          transform: none;
         }
       }
 
@@ -96,6 +112,15 @@
             left: 0;
           }
         }
+
+        @media (max-width: $breakbpoint-sm) {
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+
+          &::after {
+            bottom: -1rem;
+          }
+        }
       }
 
       .project__skill {
@@ -104,6 +129,10 @@
 
         @media (max-width: $breakbpoint-lg) {
           font-size: 1.2rem;
+        }
+
+        @media (max-width: $breakbpoint-sm) {
+          font-size: 1rem;
         }
       }
 

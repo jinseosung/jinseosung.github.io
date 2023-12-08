@@ -10,6 +10,14 @@ $breakbpoint-sm: 599px;
 $breakbpoint-md: 767px;
 $breakbpoint-lg: 991px;
 
+@mixin base-padding {
+  padding: 4rem;
+
+  @media (max-width: $breakbpoint-md) {
+    padding: 3rem 2rem;
+  }
+}
+
 @mixin wrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -25,6 +33,7 @@ $breakbpoint-lg: 991px;
   animation: close 0.2s ease-in-out;
   overflow: hidden;
   text-align: center;
+  z-index: 1;
 }
 
 @mixin input-reset {

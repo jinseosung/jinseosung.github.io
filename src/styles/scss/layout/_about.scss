@@ -3,7 +3,7 @@ $rose: #ff00ff;
 $green: #22a7b7;
 
 .about {
-  padding: 4rem;
+  @include base-padding;
 
   .about__wrapper {
     @include wrapper;
@@ -18,6 +18,10 @@ $green: #22a7b7;
 
       @media (max-width: $breakbpoint-lg) {
         gap: 3rem;
+      }
+
+      @media (max-width: $breakbpoint-md) {
+        flex-direction: column;
       }
 
       .about__left {
@@ -70,6 +74,10 @@ $green: #22a7b7;
             width: 100%;
           }
 
+          @media (max-width: $breakbpoint-md) {
+            width: 80%;
+          }
+
           .about__skill {
             display: flex;
             flex-direction: column;
@@ -106,6 +114,10 @@ $green: #22a7b7;
     .about__img-container {
       max-width: 320px;
       max-height: 425px;
+
+      @media (max-width: $breakbpoint-md) {
+        display: none;
+      }
 
       img {
         width: 100%;
