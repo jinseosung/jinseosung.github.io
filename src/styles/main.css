@@ -858,14 +858,10 @@ a {
 }
 @media (max-width: 991px) {
   .modal .modal__wrapper {
-    background-color: #181818;
-  }
-}
-@media (max-width: 767px) {
-  .modal .modal__wrapper {
     width: 100%;
     max-width: 100%;
     max-height: 100%;
+    background-color: #181818;
   }
 }
 .modal .modal__wrapper .modal__top {

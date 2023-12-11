@@ -22,13 +22,10 @@
     border-radius: 20px;
 
     @media (max-width: $breakbpoint-lg) {
-      background-color: $primaryColor;
-    }
-
-    @media (max-width: $breakbpoint-md) {
       width: 100%;
       max-width: 100%;
       max-height: 100%;
+      background-color: $primaryColor;
     }
 
     .modal__top {
