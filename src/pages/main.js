@@ -32,7 +32,7 @@ const Main = () => {
   }, []);
 
   return (
-    <section className="main">
+    <section id="main" className="main">
       <div className="main__wrapper">
         <Shapes />
         <h1 className="main__title">

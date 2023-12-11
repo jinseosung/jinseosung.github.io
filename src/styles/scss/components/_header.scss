@@ -14,17 +14,31 @@
     font-size: 1.5rem;
     font-weight: 700;
   }
+  .header__nav {
+    .header__lists {
+      display: flex;
+      gap: 2rem;
+      position: relative;
 
-  .header__lists {
-    display: flex;
-    gap: 2rem;
+      .header__list {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
 
-    .header__list {
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
+        &:hover {
+          opacity: 0.6;
+        }
 
-      &:hover {
-        opacity: 0.6;
+        @media (max-width: $breakbpoint-sm) {
+          display: none;
+        }
+      }
+
+      .list-menu {
+        display: none;
+
+        @media (max-width: $breakbpoint-sm) {
+          display: block;
+        }
       }
     }
   }
