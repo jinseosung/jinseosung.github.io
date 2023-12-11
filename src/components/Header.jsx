@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavModal from "./NavModal";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleButtonClick = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrolled = scrollY > 100;
+      setIsScrolled(scrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   return (
     <div className="header">
@@ -16,7 +31,10 @@ export default function Header() {
       </Link>
       <nav className="header__nav">
         <ul className="header__lists">
-          <li onClick={handleButtonClick} className="header__list list-menu">
+          <li
+            onClick={handleButtonClick}
+            className={`header__list list-menu ${isScrolled && "scrolled"}`}
+          >
             Menu
           </li>
           <a className="header__list" href="#about">

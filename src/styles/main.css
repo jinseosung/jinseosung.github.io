@@ -621,6 +621,12 @@ a {
     display: block;
   }
 }
+.header .header__nav .header__lists .scrolled {
+  display: block;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
 
 .footer {
   padding: 4rem;
@@ -1053,13 +1059,18 @@ a {
 }
 
 .header__nav-sm {
-  width: 100%;
+  width: 37%;
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 99;
   background-color: #181818;
+}
+@media (max-width: 599px) {
+  .header__nav-sm {
+    width: 100%;
+  }
 }
 .header__nav-sm .header__icon {
   position: fixed;

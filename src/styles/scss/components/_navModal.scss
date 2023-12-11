@@ -1,11 +1,15 @@
 .header__nav-sm {
-  width: 100%;
+  width: 37%;
   height: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 99;
   background-color: $primaryColor;
+
+  @media (max-width: $breakbpoint-sm) {
+    width: 100%;
+  }
 
   .header__icon {
     position: fixed;
