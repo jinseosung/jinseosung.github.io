@@ -3,10 +3,9 @@ import Title from "../components/Title";
 import projects from "../datas/project.json";
 import Modal from "../components/Modal";
 
-const Project = ({ width }) => {
+const Project = ({ width, isOpen, setIsOpen }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [position, setPosition] = useState({ x: undefined, y: undefined });
-  const [isOpen, setIsOpen] = useState(false);
   const [projectIndex, setProjectIndex] = useState(0);
 
   const handleMouseClick = (index) => {
