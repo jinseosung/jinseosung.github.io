@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
+  const footerLinks = [
+    { url: "https://github.com/jinseosung", icon: faGithub },
+    { url: "https://www.linkedin.com/in/jinseo-sung/", icon: faLinkedin },
+  ];
   const year = new Date().getFullYear();
 
   return (
@@ -12,18 +15,7 @@ export default function Footer() {
           <div>JINSEO SUNG</div>
           <span>© {year}, Réalisé par Jinseo Sung</span>
         </div>
-        <ul className="footer__links">
-          <Link to="https://github.com/jinseosung" target="_blank">
-            <li className="footer__link">
-              <FontAwesomeIcon icon={faGithub} />
-            </li>
-          </Link>
-          <Link to="https://www.linkedin.com/in/jinseo-sung/" target="_black">
-            <li className="footer__link">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </li>
-          </Link>
-        </ul>
+        <SocialLinks links={footerLinks} />
       </div>
     </div>
   );

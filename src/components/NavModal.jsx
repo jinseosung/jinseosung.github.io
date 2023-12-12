@@ -2,9 +2,15 @@ import { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Button from "./Button";
+import SocialLinks from "./SocialLinks";
 
 export default function NavModal({ isOpen, handleButtonClick }) {
+  const navLinks = [
+    { url: "https://github.com/jinseosung", icon: faGithub },
+    { url: "https://www.linkedin.com/in/jinseo-sung/", icon: faLinkedin },
+  ];
   const nodeRef = useRef(null);
 
   return (
@@ -62,6 +68,7 @@ export default function NavModal({ isOpen, handleButtonClick }) {
               </span>
             </a>
           </ul>
+          <SocialLinks links={navLinks} />
         </nav>
       </div>
     </CSSTransition>

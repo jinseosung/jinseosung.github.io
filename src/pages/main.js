@@ -1,12 +1,17 @@
 import { useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import { annotate, annotationGroup } from "rough-notation";
 import Shapes from "../components/Shapes";
+import SocialLinks from "../components/SocialLinks";
 
 const Main = () => {
+  const mainLinks = [
+    { url: "https://github.com/jinseosung", icon: faGithub },
+    { url: "https://www.linkedin.com/in/jinseo-sung/", icon: faLinkedin },
+    { url: "mailto:jinseosung15@gmail.com", icon: faEnvelope },
+  ];
+
   const sp1 = useRef(null);
   const sp2 = useRef(null);
   const sp3 = useRef(null);
@@ -48,25 +53,8 @@ const Main = () => {
           <br />
           J'espère pouvoir développer toutes les belles choses. ✨
         </span>
-        <ul className="main__links">
-          <Link to="https://github.com/jinseosung" target="_blank">
-            <li className="main__link">
-              <FontAwesomeIcon icon={faGithub} />
-            </li>
-          </Link>
-          <Link to="https://www.linkedin.com/in/jinseo-sung/" target="_black">
-            <li className="main__link">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </li>
-          </Link>
-          <Link to="mailto:jinseosung15@gmail.com" target="_black">
-            <li className="main__link">
-              <FontAwesomeIcon icon={faEnvelope} />
-            </li>
-          </Link>
-        </ul>
+        <SocialLinks links={mainLinks} />
       </div>
-      <Link></Link>
     </section>
   );
 };

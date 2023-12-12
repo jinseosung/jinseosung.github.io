@@ -1,0 +1,14 @@
+.social__links {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 2rem;
+  color: $gray;
+
+  .social__link {
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+}
