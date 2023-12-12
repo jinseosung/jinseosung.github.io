@@ -65,9 +65,11 @@ export default function Modal({
                 <Link to={project.url.github} target="_blank">
                   <FontAwesomeIcon icon={faGithub} />
                 </Link>
-                <Link to={project.url.site} target="_blank">
-                  <FontAwesomeIcon icon={faCode} />
-                </Link>
+                {project.url.site && (
+                  <Link to={project.url.site} target="_blank">
+                    <FontAwesomeIcon icon={faCode} />
+                  </Link>
+                )}
               </div>
               <p>{project.description}</p>
               <ul className="modal__skills">
