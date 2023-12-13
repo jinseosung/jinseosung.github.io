@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "title": "Birthday App",
+    "description": "Cette application web a été créée pour célébrer le 30e anniversaire de Jinseo. Les amis invités à la fête peuvent laisser des messages de félicitations et participer à un quiz spécial.",
+    "skills": ["React", "Scss", "Firebase"],
+    "hoverImg": "./img/birthday_app/prev.png",
+    "images": [
+      "./img/birthday_app/1.png",
+      "./img/birthday_app/2.png",
+      "./img/birthday_app/3.png"
+    ],
+    "url": {
+      "github": "https://github.com/jinseosung/birthday-messages",
+      "site": "https://jinjin-anniv30.netlify.app/"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Kasa",
+    "description": "Application web fournissant des hébergements. Construction de la partie frontend avec React.",
+    "skills": ["React", "Styled-components"],
+    "hoverImg": "./img/kasa/prev.png",
+    "images": ["./img/kasa/1.png", "./img/kasa/2.png", "./img/kasa/3.png"],
+    "url": {
+      "github": "https://github.com/jinseosung/p6_oc",
+      "site": "https://js24p6oc.netlify.app/"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Mon Vieux Grimoire",
+    "description": "Projet de construction d'un site web permettant de noter et consulter des livres. J'ai utilisé Node.js pour créer des middleware et des routes, et MongoDB pour construire une API RESTful avec une fonction de connexion utilisant jwt.",
+    "skills": ["NodeJs", "Express", "MongoDB"],
+    "hoverImg": "./img/mon_vieux_grimoire/prev.png",
+    "images": [
+      "./img/mon_vieux_grimoire/1.png",
+      "./img/mon_vieux_grimoire/2.png",
+      "./img/mon_vieux_grimoire/3.png",
+      "./img/mon_vieux_grimoire/4.png"
+    ],
+    "url": { "github": "https://github.com/jinseosung/p7_oc", "site": "" }
+  },
+  {
+    "id": 4,
+    "title": "Carottes click game",
+    "description": "Un jeu simple où vous devez cliquer sur toutes les carottes dans un temps limité pour les éliminer. Ce projet est une reconstruction d'un jeu web initialement développé en JavaScript natif, cette fois-ci réalisé en utilisant React.",
+    "skills": ["React", "Scss"],
+    "hoverImg": "./img/carrot/prev.png",
+    "images": [
+      "./img/carrot/1.png",
+      "./img/carrot/2.png",
+      "./img/carrot/3.png",
+      "./img/carrot/4.png"
+    ],
+    "url": {
+      "github": "https://github.com/jinseosung/carrots-hunting",
+      "site": "https://js24carrotgame.netlify.app/"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Booki",
+    "description": "Projet visant à construire la page d'accueil du site web d'une agence de voyage en utilisant HTML et SCSS.",
+    "skills": ["HTML", "Scss"],
+    "hoverImg": "./img/booki/prev.png",
+    "images": ["./img/booki/1.png", "./img/booki/2.png"],
+    "url": {
+      "github": "https://github.com/jinseosung/p2_oc",
+      "site": "https://js24p2oc.netlify.app/"
+    }
+  }
+]
