@@ -89,6 +89,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    color: $secondaryColor;
 
     @media (max-width: $breakbpoint-md) {
       width: 100%;
