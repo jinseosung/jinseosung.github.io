@@ -99,7 +99,7 @@
           width: 100%;
           padding-left: 0;
           font-size: 2rem;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
           position: relative;
 
           &::after {
@@ -108,17 +108,17 @@
             height: 1px;
             background-color: $borderColor;
             position: absolute;
-            bottom: -2rem;
+            bottom: -5.5rem;
             left: 0;
           }
         }
 
         @media (max-width: $breakbpoint-sm) {
           font-size: 1.5rem;
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
 
           &::after {
-            bottom: -1rem;
+            bottom: -4.5rem;
           }
         }
       }
