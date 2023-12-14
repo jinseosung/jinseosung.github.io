@@ -9,15 +9,18 @@ import Footer from "../components/Footer";
 const Root = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
+  const [navIsOpen, setNavIsOpen] = useState(false);
 
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
 
   const detectKeyDown = (e) => {
-    if (!isOpen) return;
+    if (!isOpen && !navIsOpen) return;
+
     if (e.key === "Escape" || e.key === "Esc") {
-      setIsOpen(!isOpen);
+      isOpen && setIsOpen(!isOpen);
+      navIsOpen && setNavIsOpen(!navIsOpen);
     }
   };
 
@@ -28,7 +31,7 @@ const Root = () => {
 
   return (
     <>
-      <Header />
+      <Header navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
       <Main />
       <About />
       <Project width={width} isOpen={isOpen} setIsOpen={setIsOpen} />

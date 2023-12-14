@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Button from "./Button";
 import SocialLinks from "./SocialLinks";
 
-export default function NavModal({ isOpen, handleButtonClick }) {
+export default function NavModal({ navIsOpen, handleButtonClick }) {
   const navLinks = [
     { url: "https://github.com/jinseosung", icon: faGithub },
     { url: "https://www.linkedin.com/in/jinseo-sung/", icon: faLinkedin },
@@ -16,7 +16,7 @@ export default function NavModal({ isOpen, handleButtonClick }) {
   return (
     <CSSTransition
       nodeRef={nodeRef}
-      in={isOpen}
+      in={navIsOpen}
       timeout={500}
       classNames="header"
       unmountOnExit
