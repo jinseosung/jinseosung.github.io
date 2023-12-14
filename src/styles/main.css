@@ -601,19 +601,22 @@ a {
     display: none;
   }
 }
-.header .header__nav .header__lists .list-menu {
+.header .header__nav .header__menu {
   display: none;
+  font-family: "Roboto", sans-serif;
+  z-index: 99;
+  font-size: 1.1rem;
 }
 @media (max-width: 599px) {
-  .header .header__nav .header__lists .list-menu {
+  .header .header__nav .header__menu {
     display: block;
   }
 }
-.header .header__nav .header__lists .scrolled {
+.header .header__nav .header__menu.scrolled {
   display: block;
   position: fixed;
   top: 2rem;
-  right: 2rem;
+  right: 1.5rem;
 }
 
 .footer {

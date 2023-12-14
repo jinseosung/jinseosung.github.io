@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavModal from "./NavModal";
+import Button from "./Button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,13 +31,12 @@ export default function Header() {
         JINSEO SUNG
       </Link>
       <nav className="header__nav">
+        <Button
+          onClick={handleButtonClick}
+          className={`header__menu ${isScrolled && "scrolled"}`}
+          children={`Menu`}
+        />
         <ul className="header__lists">
-          <li
-            onClick={handleButtonClick}
-            className={`header__list list-menu ${isScrolled && "scrolled"}`}
-          >
-            Menu
-          </li>
           <a className="header__list" href="#about">
             <li>A propos</li>
           </a>
