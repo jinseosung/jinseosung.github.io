@@ -10,6 +10,9 @@
   color: inherit;
   scroll-behavior: smooth;
 }
+*:active, *:focus {
+  outline: none;
+}
 
 body {
   height: 100vh;
