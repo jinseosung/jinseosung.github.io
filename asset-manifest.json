@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4b8dbee.css",
-    "main.js": "/static/js/main.a782d1bc.js",
+    "main.css": "/static/css/main.a2894e09.css",
+    "main.js": "/static/js/main.a64fac9e.js",
     "static/media/portrait.png": "/static/media/portrait.2c91d6c8cd6dc6108195.png",
+    "static/media/CV_SUNG_Jinseo.pdf": "/static/media/CV_SUNG_Jinseo.9be6d5813e3f1ad87b8b.pdf",
     "index.html": "/index.html",
-    "main.f4b8dbee.css.map": "/static/css/main.f4b8dbee.css.map",
-    "main.a782d1bc.js.map": "/static/js/main.a782d1bc.js.map"
+    "main.a2894e09.css.map": "/static/css/main.a2894e09.css.map",
+    "main.a64fac9e.js.map": "/static/js/main.a64fac9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4b8dbee.css",
-    "static/js/main.a782d1bc.js"
+    "static/css/main.a2894e09.css",
+    "static/js/main.a64fac9e.js"
   ]
 }
