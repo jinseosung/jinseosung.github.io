@@ -17,23 +17,27 @@ const Main = () => {
   const sp3 = useRef(null);
 
   useEffect(() => {
-    const a1 = annotate(sp1.current, {
-      type: "highlight",
-      color: "#8685EF",
-    });
-    const a2 = annotate(sp2.current, {
-      type: "underline",
-      color: "#FF00FF",
-      padding: 1,
-    });
-    const a3 = annotate(sp3.current, {
-      type: "box",
-      color: "#FF00FF",
-      padding: 2,
-    });
+    setTimeout(() => {
+      const a1 = annotate(sp1.current, {
+        type: "highlight",
+        color: "#8685EF",
+      });
+      const a2 = annotate(sp2.current, {
+        type: "underline",
+        color: "#FF00FF",
+        padding: 1,
+        animationDuration: 500,
+        iterations: 1,
+      });
+      const a3 = annotate(sp3.current, {
+        type: "box",
+        color: "#FF00FF",
+        padding: 2,
+      });
 
-    const ag = annotationGroup([a1, a2, a3]);
-    ag.show();
+      const ag = annotationGroup([a1, a2, a3]);
+      ag.show();
+    }, 700);
   }, []);
 
   return (
