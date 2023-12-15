@@ -60,8 +60,12 @@ $green: #22a7b7;
           }
         }
 
-        p {
-          line-height: 1.6;
+        .about__description {
+          transition: all 0.5s ease-in;
+
+          p {
+            line-height: 1.6;
+          }
         }
 
         .about__skills {
@@ -69,6 +73,7 @@ $green: #22a7b7;
           display: flex;
           justify-content: space-between;
           margin-top: 3rem;
+          transition: all 0.5s ease-in;
 
           @media (max-width: $breakbpoint-lg) {
             width: 100%;
