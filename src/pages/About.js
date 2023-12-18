@@ -3,9 +3,11 @@ import Button from "../components/Button";
 import Title from "../components/Title";
 
 const About = () => {
-  const frontends = ["HTML", "SCSS", "Javascript", "React"];
-  const backends = ["NodeJs", "Express", "API REST", "MongoDB", "Firebase"];
-  const outils = ["VSCode", "Git", "Figma"];
+  const skillsObj = {
+    frontends: ["HTML", "SCSS", "Javascript", "React"],
+    backends: ["NodeJs", "Express", "API REST", "MongoDB", "Firebase"],
+    outils: ["VSCode", "Git", "Figma"],
+  };
 
   const renderSkills = (list, type) => (
     <li className="about__skill">
@@ -40,9 +42,9 @@ const About = () => {
               nouvelles technologies, notamment TypeScript et Next.js.
             </p>
             <ul className="about__skills">
-              {renderSkills(frontends, "frontend")}
-              {renderSkills(backends, "backend")}
-              {renderSkills(outils, "outil")}
+              {renderSkills(skillsObj.frontends, "frontend")}
+              {renderSkills(skillsObj.backends, "backend")}
+              {renderSkills(skillsObj.outils, "outil")}
             </ul>
           </div>
           <div className="about__img-container">
