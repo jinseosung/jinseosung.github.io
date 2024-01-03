@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import portrait from "../assets/portrait.png";
 import Button from "../components/Button";
 import Title from "../components/Title";
+import CV from "../assets/CV_SUNG_Jinseo.pdf";
 
 const About = () => {
   const [visibleElements, setVisibleElements] = useState([]);
@@ -100,7 +101,7 @@ const About = () => {
         </div>
         <Button
           className="about__btn"
-          to={`#`}
+          href={CV}
           children={`Télécharger mon CV`}
         />
       </div>
