@@ -15,7 +15,7 @@ const Root = () => {
     setWidth(window.innerWidth);
   };
 
-  const detectKeyDown = (e) => {
+  const detectKeyDown = (e: KeyboardEvent) => {
     if (!isOpen && !navIsOpen) return;
 
     if (e.key === "Escape" || e.key === "Esc") {
