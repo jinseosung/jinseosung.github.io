@@ -1,9 +1,23 @@
-import { useEffect, useState } from "react";
+import {
+  Dispatch,
+  FunctionComponent,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import { Link } from "react-router-dom";
 import NavModal from "./NavModal";
 import Button from "./Button";
 
-export default function Header({ navIsOpen, setNavIsOpen }) {
+type HeaderProps = {
+  navIsOpen: boolean;
+  setNavIsOpen: Dispatch<SetStateAction<boolean>>;
+};
+
+const Header: FunctionComponent<HeaderProps> = ({
+  navIsOpen,
+  setNavIsOpen,
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleButtonClick = () => {
@@ -50,4 +64,6 @@ export default function Header({ navIsOpen, setNavIsOpen }) {
       <NavModal navIsOpen={navIsOpen} handleButtonClick={handleButtonClick} />
     </div>
   );
-}
+};
+
+export default Header;
