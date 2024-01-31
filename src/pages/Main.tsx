@@ -12,24 +12,24 @@ const Main = () => {
     { url: "mailto:jinseosung15@gmail.com", icon: faEnvelope },
   ];
 
-  const sp1 = useRef(null);
-  const sp2 = useRef(null);
-  const sp3 = useRef(null);
+  const sp1 = useRef<HTMLSpanElement>(null);
+  const sp2 = useRef<HTMLSpanElement>(null);
+  const sp3 = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     setTimeout(() => {
-      const a1 = annotate(sp1.current, {
+      const a1 = annotate(sp1.current as HTMLSpanElement, {
         type: "highlight",
         color: "#8685EF",
       });
-      const a2 = annotate(sp2.current, {
+      const a2 = annotate(sp2.current as HTMLSpanElement, {
         type: "underline",
         color: "#FF00FF",
         padding: 1,
         animationDuration: 500,
         iterations: 1,
       });
-      const a3 = annotate(sp3.current, {
+      const a3 = annotate(sp3.current as HTMLSpanElement, {
         type: "box",
         color: "#FF00FF",
         padding: 2,
