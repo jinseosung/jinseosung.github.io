@@ -5,10 +5,10 @@ import Title from "../components/Title";
 import CV from "../assets/CV_SUNG_Jinseo.pdf";
 
 const About = () => {
-  const [visibleElements, setVisibleElements] = useState([]);
-  const refs = useRef([]);
+  const [visibleElements, setVisibleElements] = useState<number[]>([]);
+  const refs = useRef<HTMLElement[]>([]);
 
-  const getStyleForId = (id) => ({
+  const getStyleForId = (id: number) => ({
     opacity: visibleElements.includes(id) ? 1 : 0,
     transform: visibleElements.includes(id)
       ? `translateY(0)`
@@ -16,12 +16,12 @@ const About = () => {
   });
 
   const skillsObj = {
-    frontends: ["HTML", "SCSS", "Javascript", "React"],
-    backends: ["NodeJs", "Express", "API REST", "MongoDB", "Firebase"],
+    frontends: ["HTML", "SCSS", "Javascript", "React", "Typescript", "Nextjs"],
+    backends: ["Nodejs", "Express", "API REST", "MongoDB", "Firebase"],
     outils: ["VSCode", "Git", "Figma"],
   };
 
-  const renderSkills = (list, type) => (
+  const renderSkills = (list: string[], type: string) => (
     <li className="about__skill">
       {list.map((el, index) => (
         <span key={index}>
@@ -37,7 +37,9 @@ const About = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const elementId = parseInt(entry.target.dataset.id);
+            const elementId = parseInt(
+              (entry.target as HTMLElement).dataset.id!
+            );
             setVisibleElements((prevVisibleElements) =>
               prevVisibleElements.includes(elementId)
                 ? prevVisibleElements
@@ -61,7 +63,7 @@ const About = () => {
           <div className="about__left">
             <Title prop={`À propos`} />
             <div
-              ref={(el) => (refs.current[0] = el)}
+              ref={(el) => (refs.current[0] = el as HTMLDivElement)}
               className="about__description"
               data-id="0"
               style={getStyleForId(0)}
@@ -84,7 +86,7 @@ const About = () => {
             </div>
             <ul
               ref={(el) => {
-                refs.current[1] = el;
+                refs.current[1] = el as HTMLUListElement;
               }}
               className="about__skills"
               data-id="1"
