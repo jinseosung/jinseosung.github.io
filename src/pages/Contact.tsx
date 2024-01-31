@@ -1,20 +1,27 @@
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import logoImg from "../assets/logo.jpg";
 import Button from "../components/Button";
 
 const Contact = () => {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const formElements = {
+    nom: useRef<HTMLInputElement>(null),
+    email: useRef<HTMLInputElement>(null),
+    phone: useRef<HTMLInputElement>(null),
+    message: useRef<HTMLTextAreaElement>(null),
+  };
+
+  const sendEmail = (e: FormEvent) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
+        process.env.REACT_APP_SERVICE_ID!,
+        process.env.REACT_APP_TEMPLATE_ID!,
+        form.current as HTMLFormElement,
+        process.env.REACT_APP_PUBLIC_KEY!
       )
       .then(
         () => {
@@ -24,6 +31,12 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+
+    Object.values(formElements).forEach((el) => {
+      if (el.current) {
+        el.current.value = "";
+      }
+    });
   };
 
   return (
@@ -38,34 +51,47 @@ const Contact = () => {
             children={`jinseosung15@gmail.com`}
           />
           <div className="contact__img-container">
-          <img src={logoImg} alt="logo" />
+            <img src={logoImg} alt="logo" />
           </div>
         </div>
         <form ref={form} onSubmit={sendEmail}>
           <div className="form__container">
-            <input type="text" name="from_name" placeholder="" required />
+            <input
+              ref={formElements.nom}
+              type="text"
+              name="from_name"
+              placeholder=""
+              required
+            />
             <label>Nom</label>
           </div>
           <div className="form__container">
-            <input type="email" name="from_email" placeholder="" required />
+            <input
+              ref={formElements.email}
+              type="email"
+              name="from_email"
+              placeholder=""
+              required
+            />
             <label>Email</label>
           </div>
           <div className="form__container">
             <input
+              ref={formElements.phone}
               type="text"
               name="from_tel"
               placeholder=""
-              maxLength="10"
+              maxLength={10}
               required
             />
             <label>Téléphone</label>
           </div>
           <div className="form__container">
             <textarea
+              ref={formElements.message}
               className="form__textarea"
-              type="text"
               name="message"
-              rows="6"
+              rows={6}
               placeholder=""
               required
             ></textarea>
