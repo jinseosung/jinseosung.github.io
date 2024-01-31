@@ -1,7 +1,15 @@
 import { useEffect, useState } from "react";
 
+type GeneratedShapes = {
+  type: string;
+  color: string;
+  name: string;
+  top: string;
+  left: string;
+};
+
 export default function Shapes() {
-  const [shapes, setShapes] = useState([]);
+  const [shapes, setShapes] = useState<GeneratedShapes[]>([]);
 
   useEffect(() => {
     const generateRandomShape = () => {

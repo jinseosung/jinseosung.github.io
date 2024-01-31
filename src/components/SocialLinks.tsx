@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { FunctionComponent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export default function SocialLinks({ links }) {
+type SocialLinksProps = {
+  links: { url: string; icon: IconProp }[];
+};
+
+const SocialLinks: FunctionComponent<SocialLinksProps> = ({ links }) => {
   return (
     <ul className="social__links">
       {links.map((link, index) => (
@@ -13,4 +19,6 @@ export default function SocialLinks({ links }) {
       ))}
     </ul>
   );
-}
+};
+
+export default SocialLinks;

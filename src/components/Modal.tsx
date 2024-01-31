@@ -1,24 +1,41 @@
-import { useState, useRef } from "react";
+import {
+  useState,
+  useRef,
+  FunctionComponent,
+  Dispatch,
+  SetStateAction,
+  MouseEvent,
+} from "react";
 import { CSSTransition } from "react-transition-group";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX, faCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "./Carousel";
+import { Project } from "../types/project";
 
-export default function Modal({
+type ModalProps = {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  projects: Project[];
+  projectIndex: number;
+  setProjectIndex: Dispatch<SetStateAction<number>>;
+};
+
+const Modal: FunctionComponent<ModalProps> = ({
   isOpen,
   setIsOpen,
   projects,
   projectIndex,
   setProjectIndex,
-}) {
+}) => {
   const [imageIndex, setImageIndex] = useState(0);
   const project = projects[projectIndex];
   const nodeRef = useRef(null);
 
-  const handleButtonClick = (e) => {
-    const className = e.target.className;
+  const handleButtonClick = (e: MouseEvent) => {
+    // const className = (e.target as HTMLDivElement).className;
+    const className = e.currentTarget.className;
     setImageIndex(0);
 
     if (className === "modal__prev") {
@@ -101,4 +118,6 @@ export default function Modal({
       </div>
     </CSSTransition>
   );
-}
+};
+
+export default Modal;

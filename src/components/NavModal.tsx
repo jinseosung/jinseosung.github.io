@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { FunctionComponent, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faCircle } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +6,15 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Button from "./Button";
 import SocialLinks from "./SocialLinks";
 
-export default function NavModal({ navIsOpen, handleButtonClick }) {
+type NavModalProps = {
+  navIsOpen: boolean;
+  handleButtonClick: () => void;
+};
+
+const NavModal: FunctionComponent<NavModalProps> = ({
+  navIsOpen,
+  handleButtonClick,
+}) => {
   const navLinks = [
     { url: "https://github.com/jinseosung", icon: faGithub },
     { url: "https://www.linkedin.com/in/jinseo-sung/", icon: faLinkedin },
@@ -73,4 +81,6 @@ export default function NavModal({ navIsOpen, handleButtonClick }) {
       </div>
     </CSSTransition>
   );
-}
+};
+
+export default NavModal;
